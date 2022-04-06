@@ -1,4 +1,4 @@
-import { MensagemModule } from './../componentes/mensagem/mensagem.module';
+import { SharedModule } from './../shared/shared.module';
 import { CartaoModule } from './../componentes/cartao/cartao.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,6 +10,7 @@ import { GradeFotosAnimaisComponent } from './grade-fotos-animais/grade-fotos-an
 import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
 import { ComentariosComponent } from './detalhe-animal/comentarios/comentarios.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NovoAnimalComponent } from './novo-animal/novo-animal.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     GradeFotosAnimaisComponent,
     DetalheAnimalComponent,
     ComentariosComponent,
+    NovoAnimalComponent,
   ],
-  imports: [
-    CommonModule,
-    AnimaisRoutingModule,
-    CartaoModule,
-    MensagemModule,
-    ReactiveFormsModule,
-  ],
+  imports: [CommonModule, AnimaisRoutingModule, CartaoModule, SharedModule],
 })
 export class AnimaisModule {}
